@@ -32,6 +32,7 @@ def word_count_specified(word):
 
 #noun find doesn't currently work as I would like it to, the noun list I found did not have any of the required nouns
 #and I didn't have time to change it/find other data but here is the code
+#I have commented the code that runs it at the bottom, I wouldn't reccomend running it as it needs to be correctd
 
 
 def noun_find(noun):
@@ -47,7 +48,6 @@ def noun_find(noun):
             for i in range (0, len(words)):
                 for j in range (0,3):
                     if words[i].lower() == word_noun_search[j]:
-                        print(words[i].lower())
                         while noun_search:
                             while search_left:
 
@@ -63,7 +63,6 @@ def noun_find(noun):
                                         for l in c_verbs:
                                             if i-count >= 0 and words[i - count].lower == l.lower():
                                                 count += 1
-                                                print("is this error? : c_verb found")
                                                 c_verb_exist = True
                                                 break
                                         if c_verb_exist:
